@@ -1,98 +1,54 @@
-![dRehmFlight Logo](https://github.com/nickrehm/dRehmFlight/blob/master/dRehmFlight%20Logo.png)
-
-[Intro Video](https://www.youtube.com/watch?v=tlD0C5CrWcA&lc=Ugx6m02xjHk8QH19vd94AaABAg)
-
-[RcGroups Support Thread](https://www.rcgroups.com/forums/showthread.php?3706571-dRehmFlight-VTOL-Teensy-Flight-Controller-and-Stabilization)
-
-## Overview
-
-dRehmFlight is the flight controller for hobbyists, hackers, and non-coders interested in stabilizing their wacky and unique flying creations. The code and supporting documentation is built to bring someone up to speed on VTOL flight stabilization concepts as quickly and painlessly as possible. The code is written and presented in a way that is intuitive, easy to follow, and most importantly: all in one place. No more digging through countless folders and confusing classes just to add an 'if' statement for your custom drone application. This flight controller uses an Arduino-compatible microcontroller, so there is no confusing flashing or compiling process necessary. If you can use Arduino, you can start expanding the capabilites of this flight controller to your liking.
-
-dRehmFlight has been used as a teaching tool for aircraft stabilization and flight control principles in universities and tech companies around the world. It is not meant to out-perform other flight controller packages on the market, or be used in a commercial sense. It is best suited for rapid prototyping or allowing a radio control hobbyist to get their feet wet in flight control code for their VTOL project. Much more information is included in the dRehmFlight VTOL Documentation .pdf.
-
-This code is entirely free to use and will stay that way forever. If you found this helpful for your project, donations are appreciated: [Paypal Donation](https://www.paypal.me/NicholasRehm)
-
-**New in Beta 1.3:**
-
-- Spektrum DSM Satellite RX Support
-- One-time IMU calibration
-- ESC calibration functionality
-- Motor arming bug fix
-- Code and comment clean up
-- Small bug fixes
-
-
-### Hardware Requirements
-This flight controller is based off of the Teensy 4.0 microcontroller and MPU6050 6DOF IMU. The following components (available on Amazon) are required to complete the flight controller assembly:
-
-
-**Teensy 4.0**: https://amzn.to/3oFG3QN
-
-**Alternative Links**: [Sparkfun](https://www.sparkfun.com/products/15583), [Adafruit](https://www.adafruit.com/product/4323), [Electromaker](https://www.electromaker.io/shop/product/teensy-40?gclid=Cj0KCQjwxIOXBhCrARIsAL1QFCYcZsU4tRXVgeqfOOJyg_zPV2MXTeJM2QwJ6zafMTsCb6MjWthk7r8aAn6hEALw_wcB)
-
-Due to supply chain issues, the Teensy 4.0 has been frequently out of stock throughout 2022. The Teensy 4.1 is generally in stock more often and is immediately compatible with the dRehmFlight pin mappings (plus you get extra bonus pins!): https://amzn.to/3c1OSSw
-
-
-**GY-521 MPU6050 IMU**: https://amzn.to/3edF1Vn
-
-These (and all Amazon links contained within the supporting documentation) are Amazon Affiliate links; by purchasing from these, I receive a small portion of the revenue at no cost to you. I appreciate any and all support!
-
-### Software Requirments
-Code is uploaded to the board using the Arduino IDE; download the latest version here: https://www.arduino.cc/en/main/software
-
-To connect to the Teensy, you must also download and install the Teensyduino arduino add-on; download and instructions available here: https://www.pjrc.com/teensy/td_download.html
-
-
-## Tutorial Videos
-[Building the Flight Controller Hardware](https://www.youtube.com/watch?v=EBXBEB-Xv7w&)
-
-[Setting Up Your Radio Connection](https://www.youtube.com/watch?v=Wdc1o6eSsMo)
-
-[Mounting and Configuring the IMU](https://www.youtube.com/watch?v=pi4PiBFPt70)
-
-[How the Flight Controller Code Works](https://www.youtube.com/watch?v=_n5GBudUf5Q&lc=UgwvXX18w7FtJH1ClLl4AaABAg)
-
-[Building and Coding an RC F-35 VTOL](https://www.youtube.com/watch?v=RqdcZD0ZoUk)
-
-## Flight Videos
-dRehmflight has been successfully implemented on the following platforms:
-
-**Autonomous Quadrotor:** https://www.youtube.com/watch?v=p8frNNYQNV4
-
-**Quadrotor Biplane VTOL:** https://www.youtube.com/watch?v=rk4tUKM6bd0
-
-**Dual Cyclocopter:** https://www.youtube.com/watch?v=JoVmejDsMrM&
-
-**VTOL F-35 Tricopter:** https://www.youtube.com/watch?v=RqdcZD0ZoUk
-
-**Model SpaceX Starhopper:** https://www.youtube.com/watch?v=VsyFejn40Ss
-
-**Model SpaceX Starship:** https://www.youtube.com/watch?v=5lwH7xJnB4I
-
-**Inverted Pendulum Drone Stabilization:** https://www.youtube.com/watch?v=XmYRQi48s-8
-
-**Fixed Wing Ground Effect Vehicle:** https://www.youtube.com/watch?v=uaY2G5Kbj_g
-
-**Spinning Tricopter VTOL:** https://www.youtube.com/watch?v=7JH1_ZKV7t4
-
-**Model Joby EVTOL:** https://www.youtube.com/watch?v=Dd2N_lyO_SQ
-
-**Model V-22 Osprey:** https://www.youtube.com/watch?v=2OGkYfOs9EU
-
-**Tricopter Tailsitter:** https://www.youtube.com/watch?v=8MJNfkEBRMY
-
-**Tail-less Albatross:** https://www.youtube.com/watch?v=1ifR_cvjpjk
-
-**Bicopter VTOL:** https://www.youtube.com/watch?v=XPXN0QejqM0
-
-
-I would love to see your flying creations and maybe feature them here as well. Please email me at NicholasRehmYT@gmail.com with any videos/pics of your project. -Nick Rehm
-
-
-## Disclaimer
-This code is a shared, open source flight controller for small micro aerial vehicles and is intended to be modified to suit your needs. It is NOT intended to be used on manned vehicles. I do not claim any responsibility for any damage or injury that may be inflicted as a result of the use of this code. Use and modify at your own risk. More specifically put:
-
-THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnickrehm%2FdRehmFlight&count_bg=%23E30F0F&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/nickrehm/dRehmFlight/blob/master/dRehmFlight%20Logo.png"><img src="https://github.com/nickrehm/dRehmFlight/raw/master/dRehmFlight%20Logo.png" alt="dRehmFlight 标志" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://www.youtube.com/watch?v=tlD0C5CrWcA&amp;lc=Ugx6m02xjHk8QH19vd94AaABAg" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">介绍视频</font></font></a></p>
+<p dir="auto"><a href="https://www.rcgroups.com/forums/showthread.php?3706571-dRehmFlight-VTOL-Teensy-Flight-Controller-and-Stabilization" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RcGroups 支持线程</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">概述</font></font></h2><a id="user-content-overview" class="anchor" aria-label="永久链接：概述" href="#overview"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dRehmFlight 是一款飞行控制器，适合那些对稳定其古怪而独特的飞行作品感兴趣的爱好者、黑客和非编码人员。代码和支持文档旨在让人们尽可能快速、轻松地了解 VTOL 飞行稳定概念。代码的编写和呈现方式直观、易于理解，最重要的是：一切都集中在一个地方。不再需要挖掘无数的文件夹和令人困惑的类，只是为了为您的自定义无人机应用程序添加“if”语句。该飞行控制器使用兼容 Arduino 的微控制器，因此不需要混乱的刷新或编译过程。如果您会使用 Arduino，您就可以根据自己的喜好开始扩展该飞行控制器的功能。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dRehmFlight 已被世界各地的大学和科技公司用作飞机稳定和飞行控制原理的教学工具。它并不是为了超越市场上其他飞行控制器包的性能，或用于商业意义上。它最适合快速原型设计或让无线电控制爱好者熟悉 VTOL 项目的飞行控制代码。 dRehmFlight VTOL 文档 .pdf 中包含更多信息。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该代码完全免费使用，并将永远保持这种状态。如果您发现这对您的项目有帮助，欢迎捐赠：</font></font><a href="https://www.paypal.me/NicholasRehm" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Paypal 捐赠</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beta 1.3 中的新功能：</font></font></strong></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spektrum DSM 卫星接收支持</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一次性IMU校准</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电调校准功能</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修复电机解锁错误</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码和注释清理</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">小错误修复</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">硬件要求</font></font></h3><a id="user-content-hardware-requirements" class="anchor" aria-label="永久链接：硬件要求" href="#hardware-requirements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该飞行控制器基于 Teensy 4.0 微控制器和 MPU6050 6DOF IMU。完成飞行控制器组装需要以下组件（可在亚马逊上购买）：</font></font></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">青少年 4.0</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><a href="https://amzn.to/3oFG3QN" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://amzn.to/3oFG3QN</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">替代链接</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><a href="https://www.sparkfun.com/products/15583" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sparkfun</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.adafruit.com/product/4323" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adafruit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.electromaker.io/shop/product/teensy-40?gclid=Cj0KCQjwxIOXBhCrARIsAL1QFCYcZsU4tRXVgeqfOOJyg_zPV2MXTeJM2QwJ6zafMTsCb6MjWthk7r8aAn6hEALw_wcB" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Electromaker</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">由于供应链问题，Teensy 4.0 在 2022 年全年经常缺货。Teensy 4.1 通常有货更频繁，并且立即与 dRehmFlight 引脚映射兼容（此外，您还可以获得额外的奖励引脚！）：</font></font><a href="https://amzn.to/3c1OSSw" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https:// amzn.to/3c1OSSw</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GY-521 MPU6050 IMU</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><a href="https://amzn.to/3edF1Vn" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://amzn.to/3edF1Vn</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这些（以及支持文档中包含的所有亚马逊链接）是亚马逊附属链接；通过从这些网站购买，我可以免费获得一小部分收入。我感谢所有的支持！</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">软件要求</font></font></h3><a id="user-content-software-requirments" class="anchor" aria-label="永久链接：软件要求" href="#software-requirments"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用Arduino IDE将代码上传到开发板上；在这里下载最新版本：</font></font><a href="https://www.arduino.cc/en/main/software" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.arduino.cc/en/main/software</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要连接到 Teensy，您还必须下载并安装 Teensyduino arduino 插件；此处提供下载和说明：</font></font><a href="https://www.pjrc.com/teensy/td_download.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.pjrc.com/teensy/td_download.html</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">教程视频</font></font></h2><a id="user-content-tutorial-videos" class="anchor" aria-label="永久链接：教程视频" href="#tutorial-videos"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://www.youtube.com/watch?v=EBXBEB-Xv7w&amp;" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建飞行控制器硬件</font></font></a></p>
+<p dir="auto"><a href="https://www.youtube.com/watch?v=Wdc1o6eSsMo" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设置您的无线电连接</font></font></a></p>
+<p dir="auto"><a href="https://www.youtube.com/watch?v=pi4PiBFPt70" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装和配置 IMU</font></font></a></p>
+<p dir="auto"><a href="https://www.youtube.com/watch?v=_n5GBudUf5Q&amp;lc=UgwvXX18w7FtJH1ClLl4AaABAg" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">飞行控制器代码如何工作</font></font></a></p>
+<p dir="auto"><a href="https://www.youtube.com/watch?v=RqdcZD0ZoUk" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建和编码 RC F-35 VTOL</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">飞行视频</font></font></h2><a id="user-content-flight-videos" class="anchor" aria-label="永久链接：飞行视频" href="#flight-videos"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dRehmflight 已在以下平台成功实施：</font></font></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自主四旋翼飞行器：</font></font></strong> <a href="https://www.youtube.com/watch?v=p8frNNYQNV4" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =p8frNNYQNV4</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">四旋翼双翼飞机垂直起降：</font></font></strong> <a href="https://www.youtube.com/watch?v=rk4tUKM6bd0" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch ?v=rk4tUKM6bd0</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">双旋翼机：</font></font></strong> <a href="https://www.youtube.com/watch?v=JoVmejDsMrM&amp;" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =JoVmejDsMrM&amp;</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">垂直起降 F-35 三轴飞行器：</font></font></strong> <a href="https://www.youtube.com/watch?v=RqdcZD0ZoUk" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =RqdcZD0ZoUk</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SpaceX Starhopper 模型：</font></font></strong> <a href="https://www.youtube.com/watch?v=VsyFejn40Ss" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =VsyFejn40Ss</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SpaceX 星际飞船模型：</font></font></strong> <a href="https://www.youtube.com/watch?v=5lwH7xJnB4I" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =5lwH7xJnB4I</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">倒立摆无人机稳定：</font></font></strong> <a href="https://www.youtube.com/watch?v=XmYRQi48s-8" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v= XmYRQi48s-8</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">固定翼地效飞行器：</font></font></strong> <a href="https://www.youtube.com/watch?v=uaY2G5Kbj_g" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =uaY2G5Kbj_g</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">旋转三旋翼垂直起降：</font></font></strong> <a href="https://www.youtube.com/watch?v=7JH1_ZKV7t4" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch ?v=7JH1_ZKV7t4</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模型乔比 EVTOL：</font></font></strong> <a href="https://www.youtube.com/watch?v=Dd2N_lyO_SQ" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =Dd2N_lyO_SQ</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">V-22 型鱼鹰：</font></font></strong> <a href="https://www.youtube.com/watch?v=2OGkYfOs9EU" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch? v=2OGkYfOs9EU</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">三旋翼尾翼：</font></font></strong> <a href="https://www.youtube.com/watch?v=8MJNfkEBRMY" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =8MJNfkEBRMY</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">无尾信天翁：</font></font></strong> <a href="https://www.youtube.com/watch?v=1ifR_cvjpjk" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch ?v=1ifR_cvjpjk</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">双旋翼垂直起降：</font></font></strong> <a href="https://www.youtube.com/watch?v=XPXN0QejqM0" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.youtube.com/watch?v =XPXN0QejqM0</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我很想看到你的飞行作品，也许也可以在这里展示它们。请将</font><font style="vertical-align: inherit;">您项目的任何视频/图片发送</font><font style="vertical-align: inherit;">至</font></font><a href="mailto:NicholasRehmYT@gmail.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NicholasRehmYT@gmail.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">给我发送电子邮件。 -尼克·雷姆</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">免责声明</font></font></h2><a id="user-content-disclaimer" class="anchor" aria-label="永久链接：免责声明" href="#disclaimer"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该代码是用于小型微型飞行器的共享开源飞行控制器，旨在进行修改以满足您的需求。它不适用于有人驾驶的车辆。对于因使用本代码而可能造成的任何损害或伤害，我不承担任何责任。使用和修改的风险由您自行承担。更具体地说：</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本软件由贡献者“按原样”提供，不承担任何明示或暗示的保证，包括但不限于适销性和特定用途适用性的暗示保证。在任何情况下，贡献者均不对任何直接、间接、偶然、特殊、惩戒性或后果性损害（包括但不限于采购替代商品或服务；使用、数据或利润损失；或业务中断）承担责任) 无论是何种原因，以及因使用本软件而以任何方式产生的任何责任理论，无论是合同责任、严格责任还是侵权行为（包括疏忽或其他原因），即使已被告知发生此类损害的可能性。</font></font></p>
+<p dir="auto"><a href="https://hits.seeyoufarm.com" rel="nofollow"><img src="https://camo.githubusercontent.com/57fe60fbe298eec7ee4b0122092631b3cadf1c9f20342053152f258be8cda1d5/68747470733a2f2f686974732e736565796f756661726d2e636f6d2f6170692f636f756e742f696e63722f62616467652e7376673f75726c3d68747470732533412532462532466769746875622e636f6d2532466e69636b7265686d253246645265686d466c6967687426636f756e745f62673d253233453330463046267469746c655f62673d2532333535353535352669636f6e3d2669636f6e5f636f6c6f723d253233453745374537267469746c653d6869747326656467655f666c61743d66616c7365" alt="点击数" data-canonical-src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnickrehm%2FdRehmFlight&amp;count_bg=%23E30F0F&amp;title_bg=%23555555&amp;icon=&amp;icon_color=%23E7E7E7&amp;title=hits&amp;edge_flat=false" style="max-width: 100%;"></a></p>
+</article></div>
